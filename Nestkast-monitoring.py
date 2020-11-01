@@ -19,7 +19,7 @@ while True:
                         sleep(1)
                         teller = teller + 1
                         print(teller)
-                if teller == 30 and recording == 1:
+                if teller == 300 and recording == 1:
                         camera.stop_recording()
                         x = datetime.datetime.now()
                         camera.start_recording('/home/pi/scriptJordi/Vogelkast/video %s.h264' %x)
