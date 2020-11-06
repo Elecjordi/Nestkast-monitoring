@@ -12,7 +12,7 @@ while True:
         while pir.motion_detected:
                 if recording == 0:
                         x = datetime.datetime.now()
-                        camera.start_recording('/home/pi/scriptJordi/Vogelkast/video %s.h264' %x)
+                        camera.start_recording('/home/pi/Nestkast-monitoring/Nestkast-monitoring/Vogelkast/video %s.h264' %x)
                         print("Start Recording")
                         recording = 1
                 if recording == 1:
@@ -22,7 +22,7 @@ while True:
                 if teller == 300 and recording == 1:
                         camera.stop_recording()
                         x = datetime.datetime.now()
-                        camera.start_recording('/home/pi/scriptJordi/Vogelkast/video %s.h264' %x)
+                        camera.start_recording('/home/pi/Nestkast-monitoring/Nestkast-monitoring/Vogelkast/video %s.h264' %x)
                         teller = 0
         if pir.motion_detected == False and recording == 1:
                 camera.stop_recording()
